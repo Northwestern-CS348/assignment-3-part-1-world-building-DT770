@@ -1,0 +1,86 @@
+TESTS WITH ERRORS 
+test01 (gradingtests.UnitTests)
+Traceback (most recent call last):
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/gradingtests.py", line 34, in test01
+    th.read('hanoi_all_disks_on_peg_one.txt')
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/game_masters.py", line 29, in read
+    self.kb.kb_assert(fr)
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/kb_and_inference_engine.py", line 140, in kb_assert
+    self.kb_add(fact_rule)
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/kb_and_inference_engine.py", line 72, in kb_add
+    self.ie.fc_infer(fact, fact_rule, self)
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/kb_and_inference_engine.py", line 192, in fc_infer
+    bindings = match(statement1, statement2)
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/util.py", line 37, in match
+    return match_recursive(state1.terms, state2.terms, bindings)
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/util.py", line 60, in match_recursive
+    return match_recursive(terms1[1:], terms2[1:], bindings)
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/util.py", line 56, in match_recursive
+    if not bindings.test_and_bind(terms2[0], terms1[0]):
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/logical_classes.py", line 434, in test_and_bind
+    return value_term.term == bound
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/logical_classes.py", line 321, in __eq__
+    and self.term.element == other.element))
+AttributeError: 'Constant' object has no attribute 'term'
+
+test02 (gradingtests.UnitTests)
+Traceback (most recent call last):
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/gradingtests.py", line 43, in test02
+    th.read('hanoi_all_disks_on_peg_one.txt')
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/game_masters.py", line 29, in read
+    self.kb.kb_assert(fr)
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/kb_and_inference_engine.py", line 140, in kb_assert
+    self.kb_add(fact_rule)
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/kb_and_inference_engine.py", line 72, in kb_add
+    self.ie.fc_infer(fact, fact_rule, self)
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/kb_and_inference_engine.py", line 192, in fc_infer
+    bindings = match(statement1, statement2)
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/util.py", line 37, in match
+    return match_recursive(state1.terms, state2.terms, bindings)
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/util.py", line 60, in match_recursive
+    return match_recursive(terms1[1:], terms2[1:], bindings)
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/util.py", line 56, in match_recursive
+    if not bindings.test_and_bind(terms2[0], terms1[0]):
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/logical_classes.py", line 434, in test_and_bind
+    return value_term.term == bound
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/logical_classes.py", line 321, in __eq__
+    and self.term.element == other.element))
+AttributeError: 'Constant' object has no attribute 'term'
+
+-------------------------------
+TESTS FAILED  
+test03 (gradingtests.UnitTests)
+Traceback (most recent call last):
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/gradingtests.py", line 68, in test03
+    self.checkMovables(th, expectedMovables)
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/gradingtests.py", line 26, in checkMovables
+    'cannot be found in KB: "%s"' % str(e))
+AssertionError: False is not true : Expected Fact with MOVABLE predicate cannot be found in KB: "fact: (movable disk1 peg3 peg1)"
+
+test05 (gradingtests.UnitTests)
+Traceback (most recent call last):
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/gradingtests.py", line 101, in test05
+    self.checkMovables(th, expectedMovables)
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/gradingtests.py", line 26, in checkMovables
+    'cannot be found in KB: "%s"' % str(e))
+AssertionError: False is not true : Expected Fact with MOVABLE predicate cannot be found in KB: "fact: (movable disk1 peg3 peg1)"
+
+test07 (gradingtests.UnitTests)
+Traceback (most recent call last):
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/gradingtests.py", line 132, in test07
+    self.checkMovables(th, expectedMovables)
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/gradingtests.py", line 26, in checkMovables
+    'cannot be found in KB: "%s"' % str(e))
+AssertionError: False is not true : Expected Fact with MOVABLE predicate cannot be found in KB: "fact: (movable tile8 pos3 pos2 pos3 pos1)"
+
+test09 (gradingtests.UnitTests)
+Traceback (most recent call last):
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/gradingtests.py", line 163, in test09
+    self.checkMovables(th, expectedMovables)
+  File "/Users/k2i/academics/automatedgradingapp/app/testing/world-building/gradingtests.py", line 26, in checkMovables
+    'cannot be found in KB: "%s"' % str(e))
+AssertionError: False is not true : Expected Fact with MOVABLE predicate cannot be found in KB: "fact: (movable tile2 pos2 pos1 pos2 pos2)"
+
+-------------------------------
+TESTS SKIPPED 
+-------------------------------
